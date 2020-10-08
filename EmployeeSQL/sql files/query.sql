@@ -32,3 +32,11 @@ FROM employees
 	JOIN departments
 	ON departments.dept_no = dept_emp.dept_no
 WHERE dept_name = 'Sales'
+
+SELECT employees.emp_no, last_name, first_name, dept_name
+FROM employees
+	JOIN dept_emp
+	ON employees.emp_no = dept_emp.emp_no
+	JOIN departments
+	ON departments.dept_no = dept_emp.dept_no
+WHERE dept_name = 'Sales' OR dept_name = 'Development'
