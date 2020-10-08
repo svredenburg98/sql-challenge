@@ -40,3 +40,8 @@ FROM employees
 	JOIN departments
 	ON departments.dept_no = dept_emp.dept_no
 WHERE dept_name = 'Sales' OR dept_name = 'Development'
+
+SELECT last_name, COUNT(*)
+FROM employees
+GROUP BY last_name
+ORDER BY COUNT(*) DESC
